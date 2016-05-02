@@ -11,13 +11,16 @@
 // }
 
 //print the sum of all the odd numbers from 1 to 5000
-sum = 0;
-for (var i = 0; i < 5001; i++) {
-	if (i % 2 != 0){
-	sum = sum + i;
-	}
+// sum = 0;
+// for (var i = 0; i < 5001; i++) {
+// 	if (i % 2 != 0){
+// 	sum = sum + i;
+// 	}
+// }
+// console.log(sum);
+
+//console log every element in the array
+x = [1,3,5,7,9,13];
+for (i = 0; i < x.length; i++){
+	console.log(x[i]);
 }
-console.log(sum);
-
-// x = [1,3,5,7,9,13]
-
