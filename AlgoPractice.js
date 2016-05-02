@@ -4,20 +4,20 @@
 // }
 
 // console log all odd numbers from 1-1000
-for (var i = 0; i < 1001; i++) {
-	if (i % 2 != 0){
-		console.log(i);
-	}
-}
-
-// print the sum of all the odd numbers from 1 to 5000
-// sum = 0;
-// for (var i = 0; i < 5001; i++) {
+// for (var i = 0; i < 1001; i++) {
 // 	if (i % 2 != 0){
-// 	sum = sum + i;
+// 		console.log(i);
 // 	}
 // }
-// console.log(sum);
+
+//print the sum of all the odd numbers from 1 to 5000
+sum = 0;
+for (var i = 0; i < 5001; i++) {
+	if (i % 2 != 0){
+	sum = sum + i;
+	}
+}
+console.log(sum);
 
 // x = [1,3,5,7,9,13]
 
