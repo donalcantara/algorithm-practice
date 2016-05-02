@@ -20,7 +20,19 @@
 // console.log(sum);
 
 //console log every element in the array
-x = [1,3,5,7,9,13];
-for (i = 0; i < x.length; i++){
-	console.log(x[i]);
+// x = [1,3,5,7,9,13];
+// for (i = 0; i < x.length; i++){
+// 	console.log(x[i]);
+// }
+
+//find the max
+x = [-3, 3, 5, 7];
+max = 0;
+
+for (i=0; i<=x.length; i++){
+    if (x[i]>max) {
+        max = x[i];
+    }
 }
+console.log(max);
+
