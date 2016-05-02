@@ -1,14 +1,14 @@
-// console log all numbers from 1-55
-for (var i = 0; i < 256; i++) {
-	console.log(i);
-}
+// // console log all numbers from 1-55
+// for (var i = 0; i < 256; i++) {
+// 	console.log(i);
+// }
 
 // console log all odd numbers from 1-1000
-// for (var i = 0; i < 1001; i++) {
-// 	if (i % 2 != 0){
-// 		console.log(i);
-// 	}
-// }
+for (var i = 0; i < 1001; i++) {
+	if (i % 2 != 0){
+		console.log(i);
+	}
+}
 
 // print the sum of all the odd numbers from 1 to 5000
 // sum = 0;
