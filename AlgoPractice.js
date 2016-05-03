@@ -37,9 +37,24 @@
 // console.log(max);
 
 //find the average of an array
-x = [1,3,5,7,20];
-sum = 0;
-for (i = 0; i < x.length; i++){
-	sum = sum + x[i];
+// x = [1,3,5,7,20];
+// sum = 0;
+// for (i = 0; i < x.length; i++){
+// 	sum = sum + x[i];
+// }
+// console.log(sum/x.length);
+
+// add to an array all the odd numbers from 1-255
+y = [];
+for (var i = 0; i < 256; i++) {
+	if (i % 2 != 0){
+		y.push(i);
+	}
 }
-console.log(sum/x.length);
+console.log(y);
+
+
+
+
+
+
