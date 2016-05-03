@@ -104,18 +104,25 @@
 // console.log(avg);
 
 //shift each element in the array by one
-x = [1,3,5];
-console.log(x);
+// x = [1,3,5];
+// console.log(x);
 
-for (i = 0; i < x.length; i++){
-	if (x[i+1] != null){
-		x[i] = x[i+1];
+// for (i = 0; i < x.length; i++){
+// 	if (x[i+1] != null){
+// 		x[i] = x[i+1];
+// 	}
+// }
+// x[x.length-1] = 0;
+// console.log(x);
+
+// replaces all negative elements with "dojo"
+x = [1, -5, 10, -2];
+for (var i = 0; i < x.length; i++) {
+	if (x[i] < 0){
+		x[i] = "dojo";
 	}
 }
-x[x.length-1] = 0;
 console.log(x);
-
-
 
 
 
