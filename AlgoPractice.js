@@ -55,23 +55,24 @@
 
 
 // add to an array all elements of x greater than y
-y = 1;
-x = [1, 3, 5, 7, 14, 15, 19];
-o = [];
+// y = 1;
+// x = [1, 3, 5, 7, 14, 15, 19];
+// o = [];
 
-for (var i = 0; i < x.length; i++) {
-	if (x[i] > y){
-		o.push(i);
-	}
+// for (var i = 0; i < x.length; i++) {
+// 	if (x[i] > y){
+// 		o.push(i);
+// 	}
+// }
+// console.log(o.length);
+
+//square each element of an array
+x = [1,3,5];
+
+for (i = 0; i < x.length; i++){
+	x[i] = x[i] * x[i];
 }
-console.log(o.length);
-
-
-
-
-
-
-
+console.log(x);
 
 
 
