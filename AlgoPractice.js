@@ -75,14 +75,33 @@
 
 
 // replaces all negative elements in an array with ZERO
-x = [1, -5, 10, -2];
-for (var i = 0; i < x.length; i++) {
-	if (x[i] < 0){
-		x[i] = 0;
-	}
-}
-console.log(x);
+// x = [1, -5, 10, -2];
+// for (var i = 0; i < x.length; i++) {
+// 	if (x[i] < 0){
+// 		x[i] = 0;
+// 	}
+// }
+// console.log(x);
 
+//find the max, min and avg of an array
+x = [1, 5, 10, -2];
+max = x[0];
+min = x[0];
+sum = 0;
+
+for (i = 0; i < x.length; i++){
+	sum = sum + x[i];
+    if (x[i]>max) {
+        max = x[i];
+    } else if (x[i] < min){
+    	min = x[i];
+    }
+}
+avg = sum/x.length;
+
+console.log(max);
+console.log(min);
+console.log(avg);
 
 
 
