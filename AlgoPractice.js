@@ -45,13 +45,39 @@
 // console.log(sum/x.length);
 
 // add to an array all the odd numbers from 1-255
-y = [];
-for (var i = 0; i < 256; i++) {
-	if (i % 2 != 0){
-		y.push(i);
+// y = [];
+// for (var i = 0; i < 256; i++) {
+// 	if (i % 2 != 0){
+// 		y.push(i);
+// 	}
+// }
+// console.log(y);
+
+
+// add to an array all elements of x greater than y
+y = 1;
+x = [1, 3, 5, 7, 14, 15, 19];
+o = [];
+
+for (var i = 0; i < x.length; i++) {
+	if (x[i] > y){
+		o.push(i);
 	}
 }
-console.log(y);
+console.log(o.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
