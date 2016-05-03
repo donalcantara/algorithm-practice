@@ -26,13 +26,20 @@
 // }
 
 //find the max
-x = [-3, 3, 5, 7];
-max = 0;
+// x = [-3, 3, 5, 7];
+// max = 0;
 
-for (i=0; i<=x.length; i++){
-    if (x[i]>max) {
-        max = x[i];
-    }
+// for (i=0; i<=x.length; i++){
+//     if (x[i]>max) {
+//         max = x[i];
+//     }
+// }
+// console.log(max);
+
+//find the average of an array
+x = [1,3,5,7,20];
+sum = 0;
+for (i = 0; i < x.length; i++){
+	sum = sum + x[i];
 }
-console.log(max);
-
+console.log(sum/x.length);
