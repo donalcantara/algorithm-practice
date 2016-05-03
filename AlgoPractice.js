@@ -116,14 +116,21 @@
 // console.log(x);
 
 // replaces all negative elements with "dojo"
-x = [1, -5, 10, -2];
-for (var i = 0; i < x.length; i++) {
-	if (x[i] < 0){
-		x[i] = "dojo";
-	}
+// x = [1, -5, 10, -2];
+// for (var i = 0; i < x.length; i++) {
+// 	if (x[i] < 0){
+// 		x[i] = "dojo";
+// 	}
+// }
+// console.log(x);
+
+//populate array with 10 random numbers between 0-100
+x = [];
+
+for(i = 0; i < 10; i++){
+	x.push(Math.floor(Math.random()*100));
 }
 console.log(x);
-
 
 
 
