@@ -67,16 +67,21 @@
 // console.log(o.length);
 
 //square each element of an array
-x = [1,3,5];
+// x = [1,3,5];
+// for (i = 0; i < x.length; i++){
+// 	x[i] = x[i] * x[i];
+// }
+// console.log(x);
 
-for (i = 0; i < x.length; i++){
-	x[i] = x[i] * x[i];
+
+// replaces all negative elements in an array with ZERO
+x = [1, -5, 10, -2];
+for (var i = 0; i < x.length; i++) {
+	if (x[i] < 0){
+		x[i] = 0;
+	}
 }
 console.log(x);
-
-
-
-
 
 
 
