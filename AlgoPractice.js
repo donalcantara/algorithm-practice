@@ -125,12 +125,54 @@
 // console.log(x);
 
 //populate array with 10 random numbers between 0-100
-x = [];
+// x = [];
 
-for(i = 0; i < 10; i++){
-	x.push(Math.floor(Math.random()*100));
-}
+// for(i = 0; i < 10; i++){
+// 	x.push(Math.floor(Math.random()*100));
+// }
+// console.log(x);
+
+//first and last numbers of array switched
+x = [2, 3, 5, 7, 6];
 console.log(x);
+temp = x[0];
+
+x[0] = x[x.length-1];
+x[x.length-1] = temp;
+
+console.log(x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
