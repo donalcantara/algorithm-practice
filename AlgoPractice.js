@@ -84,25 +84,36 @@
 // console.log(x);
 
 //find the max, min and avg of an array
-x = [1, 5, 10, -2];
-max = x[0];
-min = x[0];
-sum = 0;
+// x = [1, 5, 10, -2];
+// max = x[0];
+// min = x[0];
+// sum = 0;
+
+// for (i = 0; i < x.length; i++){
+// 	sum = sum + x[i];
+//     if (x[i]>max) {
+//         max = x[i];
+//     } else if (x[i] < min){
+//     	min = x[i];
+//     }
+// }
+// avg = sum/x.length;
+
+// console.log(max);
+// console.log(min);
+// console.log(avg);
+
+//shift each element in the array by one
+x = [1,3,5];
+console.log(x);
 
 for (i = 0; i < x.length; i++){
-	sum = sum + x[i];
-    if (x[i]>max) {
-        max = x[i];
-    } else if (x[i] < min){
-    	min = x[i];
-    }
+	if (x[i+1] != null){
+		x[i] = x[i+1];
+	}
 }
-avg = sum/x.length;
-
-console.log(max);
-console.log(min);
-console.log(avg);
-
+x[x.length-1] = 0;
+console.log(x);
 
 
 
