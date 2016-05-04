@@ -133,19 +133,25 @@
 // console.log(x);
 
 //first and last numbers of array switched
-x = [2, 3, 5, 7, 6];
+// x = [2, 3, 5, 7, 6];
+// console.log(x);
+// temp = x[0];
+
+// x[0] = x[x.length-1];
+// x[x.length-1] = temp;
+
+// console.log(x);
+
+//reverse elements in array in the same order
+x = [-3,5,1,3,2,10];
 console.log(x);
-temp = x[0];
 
-x[0] = x[x.length-1];
-x[x.length-1] = temp;
-
+for(i = 0; i < Math.ceil(x.length/2); i++) {
+	var temp = x[i];
+	x[i] = x[x.length - 1 - i];
+	x[x.length - 1 - i] = temp;
+}
 console.log(x);
-
-
-
-
-
 
 
 
