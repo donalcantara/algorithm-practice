@@ -143,20 +143,27 @@
 // console.log(x);
 
 //reverse elements in array in the same order
-x = [-3,5,1,3,2,10];
-console.log(x);
+// x = [-3,5,1,3,2,10];
+// console.log(x);
 
-for(i = 0; i < Math.ceil(x.length/2); i++) {
-	var temp = x[i];
-	x[i] = x[x.length - 1 - i];
-	x[x.length - 1 - i] = temp;
+// for(i = 0; i < Math.ceil(x.length/2); i++) {
+// 	var temp = x[i];
+// 	x[i] = x[x.length - 1 - i];
+// 	x[x.length - 1 - i] = temp;
+// }
+// console.log(x);
+
+//inserts a new number X at an index Y
+x = 10;
+y = 2;
+array = [1, 3, 5, 7];
+
+function insert (x, y) {
+	array[y] = x;
+	console.log(array);
 }
-console.log(x);
 
-
-
-
-
+insert(100,1);
 
 
 
