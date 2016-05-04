@@ -44,6 +44,18 @@
 // }
 // console.log(sum/x.length);
 
+//replaces with variable X at an index Y
+// x = 10;
+// y = 2;
+// array = [1, 3, 5, 7];
+
+// function insert (x, y) {
+// 	array[y] = x;
+// 	console.log(array);
+// }
+
+// insert(100,1);
+
 // add to an array all the odd numbers from 1-255
 // y = [];
 // for (var i = 0; i < 256; i++) {
@@ -153,24 +165,34 @@
 // }
 // console.log(x);
 
-//inserts a new number X at an index Y
-x = 10;
-y = 2;
-array = [1, 3, 5, 7];
+//inserts at index y the x variable
+// x = 10;
+// y = 2;
+// arr = [1, 3, 5, 7];
+// console.log(arr);
 
-function insert (x, y) {
-	array[y] = x;
-	console.log(array);
+// arr.push(0);
+
+// for (var i = arr.length-1; i > y; i--) {
+// 	arr[i] = arr[i-1];
+// }
+
+// arr[y] = x;
+// console.log(arr);
+
+//remove negative numbers in the array
+x = [0, -1, 2, -3, 4, -5, 6, 9, -10, 11, -20, 33];
+console.log(x);
+
+for (i = x.length-1; i >= 0; i--){
+	if ( x[i] < 0) {
+		temp = x[x.length-1];
+		x[x.length-1] = x[i];
+		x[i] = temp;
+		x.pop(x[x.length-1]);
+	}
 }
-
-insert(100,1);
-
-
-
-
-
-
-
+console.log(x);
 
 
 
