@@ -181,22 +181,33 @@
 // console.log(arr);
 
 //remove negative numbers in the array
-x = [0, -1, 2, -3, 4, -5, 6, 9, -10, 11, -20, 33];
-console.log(x);
+// x = [0, -1, 2, -3, 4, -5, 6, 9, -10, 11, -20, 33];
+// console.log(x);
 
-for (i = x.length-1; i >= 0; i--){
-	if ( x[i] < 0) {
-		temp = x[x.length-1];
-		x[x.length-1] = x[i];
-		x[i] = temp;
-		x.pop(x[x.length-1]);
+// for (i = x.length-1; i >= 0; i--){
+// 	if ( x[i] < 0) {
+// 		temp = x[x.length-1];
+// 		x[x.length-1] = x[i];
+// 		x[i] = temp;
+// 		x.pop(x[x.length-1]);
+// 	}
+// }
+// console.log(x);
+
+function linearSearch(x, b) {
+	var count = 0;
+	for (var i = 0; i < b.length; i++) {
+		if (b[i] == x) {
+			count ++;
+		};
 	}
+	console.log(count);
 }
-console.log(x);
 
+var arr = [24, 8, 23, 3, 5, 2, 0, 10, 8, 8 ,8];
 
-
-
+linearSearch(8, arr);   // => 1
+linearSearch(2, arr); // => false
 
 
 
