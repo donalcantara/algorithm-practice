@@ -194,20 +194,40 @@
 // }
 // console.log(x);
 
-function linearSearch(x, b) {
-	var count = 0;
-	for (var i = 0; i < b.length; i++) {
-		if (b[i] == x) {
-			count ++;
-		};
-	}
-	console.log(count);
+//linear search function that searches for a given number in an array
+// function linearSearch(x, b) {
+// 	var count = 0;
+// 	for (var i = 0; i < b.length; i++) {
+// 		if (b[i] == x) {
+// 			count ++;
+// 		};
+// 	}
+// 	console.log(count);
+// }
+
+// var arr = [24, 8, 23, 3, 5, 2, 0, 10, 8, 8 ,8];
+
+// linearSearch(8, arr);   // => 1
+// linearSearch(2, arr); // => false
+
+//adding up all the numbers up to and including specified N
+function iSum(num){
+	var sum = 0;
+	for (var i = 1; i <= num; i++) {
+		sum = sum + i;
+	};
+	console.log(sum);
 }
 
-var arr = [24, 8, 23, 3, 5, 2, 0, 10, 8, 8 ,8];
+iSum(2);
 
-linearSearch(8, arr);   // => 1
-linearSearch(2, arr); // => false
+
+
+
+
+
+
+
 
 
 
