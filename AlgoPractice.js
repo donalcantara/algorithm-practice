@@ -243,21 +243,28 @@
 // console.log(rSum(4));
 
 //an interative fibonacci algorithm function
-function iterativeFibonacci(n){
-	var fibs = [0, 1];
+// function iterativeFibonacci(n){
+// 	var fibs = [0, 1];
 
-	for (var i = 0; i < n; i++){
-		fibs.push(fibs[0] + fibs[1]);
-		fibs.shift();
+// 	for (var i = 0; i < n; i++){
+// 		fibs.push(fibs[0] + fibs[1]);
+// 		fibs.shift();
+// 	}
+// 	return fibs[0];
+// }
+
+// console.log(iterativeFibonacci(3));
+
+//a recursive fibonacci algorithm function
+function recursiveFibonacci(n){
+
+	if (n == 1 || n == 2) {
+		return 1;
 	}
-	return fibs[0];
+	return recursiveFibonacci(n-1) + recursiveFibonacci(n-2);
 }
 
-console.log(iterativeFibonacci(6));
-
-
-
-
+console.log(recursiveFibonacci(20));
 
 
 
