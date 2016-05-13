@@ -222,18 +222,25 @@
 // iSum(2);
 
 //multiply all the numbers up to and including specified
-function iMul(num){
-	var product = 1;
-	for (var i = 1; i <= num; i++) {
-		product = product * i;
-	};
-	console.log(product);
+// function iMul(num){
+// 	var product = 1;
+// 	for (var i = 1; i <= num; i++) {
+// 		product = product * i;
+// 	};
+// 	console.log(product);
+// }
+
+// iMul(5);
+
+//recursive version
+function rSum(n) {
+  if (n == 1) {
+    return 1;
+  }
+  return n + rSum(n-1);
 }
 
-iMul(5);
-
-
-
+console.log(rSum(4));
 
 
 
