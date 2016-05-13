@@ -211,17 +211,26 @@
 // linearSearch(2, arr); // => false
 
 //adding up all the numbers up to and including specified N
-function iSum(num){
-	var sum = 0;
+// function iSum(num){
+// 	var sum = 0;
+// 	for (var i = 1; i <= num; i++) {
+// 		sum = sum + i;
+// 	};
+// 	console.log(sum);
+// }
+
+// iSum(2);
+
+//multiply all the numbers up to and including specified
+function iMul(num){
+	var product = 1;
 	for (var i = 1; i <= num; i++) {
-		sum = sum + i;
+		product = product * i;
 	};
-	console.log(sum);
+	console.log(product);
 }
 
-iSum(2);
-
-
+iMul(5);
 
 
 
