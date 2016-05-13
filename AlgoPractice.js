@@ -233,21 +233,27 @@
 // iMul(5);
 
 //recursive version
-function rSum(n) {
-  if (n == 1) {
-    return 1;
-  }
-  return n + rSum(n-1);
+// function rSum(n) {
+//   if (n == 1) {
+//     return 1;
+//   }
+//   return n + rSum(n-1);
+// }
+
+// console.log(rSum(4));
+
+//an interative fibonacci algorithm function
+function iterativeFibonacci(n){
+	var fibs = [0, 1];
+
+	for (var i = 0; i < n; i++){
+		fibs.push(fibs[0] + fibs[1]);
+		fibs.shift();
+	}
+	return fibs[0];
 }
 
-console.log(rSum(4));
-
-
-
-
-
-
-
+console.log(iterativeFibonacci(6));
 
 
 
