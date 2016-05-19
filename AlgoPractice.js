@@ -299,4 +299,47 @@
 
 // diceroll();
 
+// create a function that adds the digits of a given number until the sum is only one digit
+
+// function sumToOne(num){
+// 	var sum = 0;
+// 	while(num>0){
+// 		sum+=num%10;
+// 		num = Math.floor(num/10);
+// 	}
+// 	while(sum>=10){
+// 		sum = (sum%10) + Math.floor(sum/10);
+// 		}
+// 	console.log(sum);
+// }
+
+// sumToOne(12345);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
