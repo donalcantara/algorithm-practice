@@ -315,6 +315,18 @@
 
 // sumToOne(12345);
 
+//function that does the fibonacci sequence iteratively
+function iterFib(n){
+	var fibo = [0,1];
+	for(var i=1; i< n; i++){
+		fibo.push(fibo[i] + fibo[i-1]);
+	}
+	console.log(fibo)
+	console.log(fibo[n]);
+}
+
+iterFib(5);
+
 
 
 
