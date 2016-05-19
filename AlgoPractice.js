@@ -327,22 +327,35 @@
 
 // iterFib(5);
 
-//push front function
-function pushFront (array, num){
-	for(var i = array.length; i>0; i--){
-		array[i] = array[i-1];
+//push front function - adding a number to the front of an array
+// function pushFront (array, num){
+// 	for(var i = array.length; i>0; i--){
+// 		array[i] = array[i-1];
+// 	}
+// 	array[0] = num;
+// 	console.log(array);
+// }
+
+// array = [7,986];
+// num = 10;
+// pushFront(array, num);
+
+//popFront function = popping off the first item of an array
+function popFront(arr){
+	if(arr.length < 2){
+		console.log(arr);
 	}
-	array[0] = num;
-	console.log(array);
+	for(var i = 0; i < arr.length-1; i++) {
+		var temp = arr[i];
+		arr[i] = arr[i+1];
+		arr[i+1] = temp;
+	}
+	console.log(arr.pop());
+	console.log(arr);
 }
 
-array = [7,986];
-num = 10;
-pushFront(array, num);
-
-
-
-
+array = [10,28,73,83];
+popFront(array);
 
 
 
