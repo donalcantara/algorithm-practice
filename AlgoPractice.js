@@ -1,7 +1,18 @@
-// // console log all numbers from 1-55
+// // console log all numbers from 1-255
 // for (var i = 0; i < 256; i++) {
 // 	console.log(i);
 // }
+
+recursive 255 function
+function twofittyfive(n){
+	if(n<1){
+		return n;
+	}
+	console.log(n);
+	return twofittyfive(n-1);
+}
+
+twofittyfive(10000);
 
 // console log all odd numbers from 1-1000
 // for (var i = 0; i < 1001; i++) {
@@ -341,26 +352,21 @@
 // pushFront(array, num);
 
 //popFront function = popping off the first item of an array
-function popFront(arr){
-	if(arr.length < 2){
-		console.log(arr);
-	}
-	for(var i = 0; i < arr.length-1; i++) {
-		var temp = arr[i];
-		arr[i] = arr[i+1];
-		arr[i+1] = temp;
-	}
-	console.log(arr.pop());
-	console.log(arr);
-}
+// function popFront(arr){
+// 	if(arr.length < 2){
+// 		console.log(arr);
+// 	}
+// 	for(var i = 0; i < arr.length-1; i++) {
+// 		var temp = arr[i];
+// 		arr[i] = arr[i+1];
+// 		arr[i+1] = temp;
+// 	}
+// 	console.log(arr.pop());
+// 	console.log(arr);
+// }
 
-array = [10,28,73,83];
-popFront(array);
-
-
-
-
-
+// array = [10,28,73,83];
+// popFront(array);
 
 
 
