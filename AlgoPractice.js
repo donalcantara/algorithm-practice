@@ -313,22 +313,32 @@
 // 	console.log(sum);
 // }
 
-// sumToOne(12345);
+// sumToOne(8725167);
 
 //function that does the fibonacci sequence iteratively
-function iterFib(n){
-	var fibo = [0,1];
-	for(var i=1; i< n; i++){
-		fibo.push(fibo[i] + fibo[i-1]);
+// function iterFib(n){
+// 	var fibo = [0,1];
+// 	for(var i=1; i< n; i++){
+// 		fibo.push(fibo[i] + fibo[i-1]);
+// 	}
+// 	console.log(fibo)
+// 	console.log(fibo[n]);
+// }
+
+// iterFib(5);
+
+//push front function
+function pushFront (array, num){
+	for(var i = array.length; i>0; i--){
+		array[i] = array[i-1];
 	}
-	console.log(fibo)
-	console.log(fibo[n]);
+	array[0] = num;
+	console.log(array);
 }
 
-iterFib(5);
-
-
-
+array = [7,986];
+num = 10;
+pushFront(array, num);
 
 
 
