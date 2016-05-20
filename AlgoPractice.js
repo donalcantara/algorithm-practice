@@ -369,25 +369,49 @@
 // popFront(array);
 
 //checking if a given number is a prime number
-function isPrime(n){
-	var i = 2;
-	if(n==1){
-		return true;
+// function isPrime(n){
+// 	var i = 2;
+// 	if(n==1){
+// 		return true;
+// 	}
+// 	while(i<n){
+// 		if(n%i==0 || n%2==0){
+// 			return false;
+// 		}
+// 	i++;
+// 	}
+// 	return true;
+// }
+
+// console.log(isPrime(53));
+
+//recursive binary search
+function RbSearch(arr, val, min, mid, max){
+	if(min===undefined){
+		min = 0;
+		max = arr.length-1;
+		mid = Math.floor(arr.length/2);
 	}
-	while(i<n){
-		if(n%i==0 || n%2==0){
-			return false;
-		}
-	i++;
+	if(min>max){
+		return false;
 	}
-	return true;
+	if(arr[mid]==val){
+		return mid;
+	}
+	if(arr[mid]>val){
+		max = mid-1;
+		mid = max;
+		return RbSearch(arr, val, min, mid, max);
+	}
+	if(arr[mid]<val){
+		min = mid+1;
+		mid = min;
+		return RbSearch(arr, val, min, mid, max);
+	}
 }
 
-console.log(isPrime(53));
-
-
-
-
+array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+console.log(RbSearch(array, 19));
 
 
 
