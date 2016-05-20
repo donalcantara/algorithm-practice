@@ -3,16 +3,16 @@
 // 	console.log(i);
 // }
 
-recursive 255 function
-function twofittyfive(n){
-	if(n<1){
-		return n;
-	}
-	console.log(n);
-	return twofittyfive(n-1);
-}
+// recursive 255 function
+// function twofittyfive(n){
+// 	if(n<1){
+// 		return n;
+// 	}
+// 	console.log(n);
+// 	return twofittyfive(n-1);
+// }
 
-twofittyfive(10000);
+// twofittyfive(10000);
 
 // console log all odd numbers from 1-1000
 // for (var i = 0; i < 1001; i++) {
@@ -368,7 +368,22 @@ twofittyfive(10000);
 // array = [10,28,73,83];
 // popFront(array);
 
+//checking if a given number is a prime number
+function isPrime(n){
+	var i = 2;
+	if(n==1){
+		return true;
+	}
+	while(i<n){
+		if(n%i==0 || n%2==0){
+			return false;
+		}
+	i++;
+	}
+	return true;
+}
 
+console.log(isPrime(53));
 
 
 
