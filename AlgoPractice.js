@@ -242,7 +242,7 @@
 // 	console.log(sum);
 // }
 
-// iSum(2);
+// iSum(20);
 
 //multiply all the numbers up to and including specified
 // function iMul(num){
@@ -290,37 +290,41 @@
 // console.log(recursiveFibonacci(20));
 
 //make a function that rolls two die until the dice match
-// function diceroll() {
+function diceroll() {
 
-// 	var rolls = 0;
-// 	var min = 12;
-// 	var max = 2;
-// 	var avg;
-// 	var sum = 0;
-// 	var roll1 = 0;
-// 	var roll2 = 1;
+	var rolls = 0;
+	var min = 12;
+	var max = 2;
+	var avg;
+	var sum = 0;
+	var roll1 = 0;
+	var roll2 = 1;
 
-// 	while (roll1 != roll2){
-// 		rolls++;
-// 		var roll1 = Math.floor(Math.random()*6) + 1;
-// 		var roll2 = Math.floor(Math.random()*6) + 1;
-// 		var roll = roll1 + roll2;
-// 		console.log("Rolled:" + roll);
-// 		if(roll<min){
-// 			min = roll;
-// 		}
-// 		if(roll>max){
-// 			max = roll;
-// 		}
-// 		sum = sum + roll;
-// 		avg = sum/rolls;
-// 	}
-// 	console.log("The minumum roll was:" + min);
-// 	console.log("The maximum roll was:" + max);
-// 	console.log("The average roll was:" + Math.floor(avg));
-// }
+	while (roll1 != roll2){
+		rolls++;
+		var roll1 = Math.floor(Math.random()*6) + 1;
+		var roll2 = Math.floor(Math.random()*6) + 1;
+		var roll = roll1 + roll2;
+		console.log("This Roll: " + roll);
+		if(roll<min){
+			min = roll;
+		}
+		if(roll>max){
+			max = roll;
+		}
+		sum = sum + roll;
+		avg = sum/rolls;
+		console.log('Die one rolled a ' + roll1);
+		console.log('Die two rolled a ' + roll2);
+	}
+	console.log('Results:')
+	console.log("The minumum roll was: " + min);
+	console.log("The maximum roll was: " + max);
+	console.log("The number of rolls was: " + rolls);
+	console.log("The average roll was: " + Math.floor(avg));
+}
 
-// diceroll();
+diceroll();
 
 // create a function that adds the digits of a given number until the sum is only one digit
 
