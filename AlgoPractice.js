@@ -36,9 +36,9 @@
 // 	console.log(x[i]);
 // }
 
-//find the max
+// find the max
 // x = [-3, 3, 5, 7];
-// max = 0;
+// var max = x[0];
 
 // for (i=0; i<=x.length; i++){
 //     if (x[i]>max) {
@@ -46,6 +46,18 @@
 //     }
 // }
 // console.log(max);
+
+// function findmax(array) {
+// 	var max = array[0];
+// 	for (i = 1; i <= array.length; i++){
+// 	    if (array[i] > max) {
+// 	        max = array[i];
+// 	    }
+// 	}
+// 	console.log(max);
+// }
+
+// findmax(x);
 
 //find the average of an array
 // x = [1,3,5,7,20];
@@ -386,32 +398,51 @@
 // console.log(isPrime(53));
 
 //recursive binary search
-function RbSearch(arr, val, min, mid, max){
-	if(min===undefined){
-		min = 0;
-		max = arr.length-1;
-		mid = Math.floor(arr.length/2);
-	}
-	if(min>max){
-		return false;
-	}
-	if(arr[mid]==val){
-		return mid;
-	}
-	if(arr[mid]>val){
-		max = mid-1;
-		mid = max;
-		return RbSearch(arr, val, min, mid, max);
-	}
-	if(arr[mid]<val){
-		min = mid+1;
-		mid = min;
-		return RbSearch(arr, val, min, mid, max);
-	}
-}
+// function RbSearch(arr, val, min, mid, max){
+// 	if(min===undefined){
+// 		min = 0;
+// 		max = arr.length-1;
+// 		mid = Math.floor(arr.length/2);
+// 	}
+// 	if(min>max){
+// 		return false;
+// 	}
+// 	if(arr[mid]==val){
+// 		return mid;
+// 	}
+// 	if(arr[mid]>val){
+// 		max = mid-1;
+// 		mid = max;
+// 		return RbSearch(arr, val, min, mid, max);
+// 	}
+// 	if(arr[mid]<val){
+// 		min = mid+1;
+// 		mid = min;
+// 		return RbSearch(arr, val, min, mid, max);
+// 	}
+// }
 
-array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-console.log(RbSearch(array, 19));
+// array = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+// console.log(RbSearch(array,63));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
