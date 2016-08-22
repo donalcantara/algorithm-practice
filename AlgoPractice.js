@@ -290,41 +290,41 @@
 // console.log(recursiveFibonacci(20));
 
 //make a function that rolls two die until the dice match
-function diceroll() {
+// function diceroll() {
 
-	var rolls = 0;
-	var min = 12;
-	var max = 2;
-	var avg;
-	var sum = 0;
-	var roll1 = 0;
-	var roll2 = 1;
+// 	var rolls = 0;
+// 	var min = 12;
+// 	var max = 2;
+// 	var avg;
+// 	var sum = 0;
+// 	var roll1 = 0;
+// 	var roll2 = 1;
 
-	while (roll1 != roll2){
-		rolls++;
-		var roll1 = Math.floor(Math.random()*6) + 1;
-		var roll2 = Math.floor(Math.random()*6) + 1;
-		var roll = roll1 + roll2;
-		console.log("This Roll: " + roll);
-		if(roll<min){
-			min = roll;
-		}
-		if(roll>max){
-			max = roll;
-		}
-		sum = sum + roll;
-		avg = sum/rolls;
-		console.log('Die one rolled a ' + roll1);
-		console.log('Die two rolled a ' + roll2);
-	}
-	console.log('Results:')
-	console.log("The minumum roll was: " + min);
-	console.log("The maximum roll was: " + max);
-	console.log("The number of rolls was: " + rolls);
-	console.log("The average roll was: " + Math.floor(avg));
-}
+// 	while (roll1 != roll2){
+// 		rolls++;
+// 		var roll1 = Math.floor(Math.random()*6) + 1;
+// 		var roll2 = Math.floor(Math.random()*6) + 1;
+// 		var roll = roll1 + roll2;
+// 		console.log("This Roll: " + roll);
+// 		if(roll<min){
+// 			min = roll;
+// 		}
+// 		if(roll>max){
+// 			max = roll;
+// 		}
+// 		sum = sum + roll;
+// 		avg = sum/rolls;
+// 		console.log('Die one rolled a ' + roll1);
+// 		console.log('Die two rolled a ' + roll2);
+// 	}
+// 	console.log('Results:')
+// 	console.log("The minumum roll was: " + min);
+// 	console.log("The maximum roll was: " + max);
+// 	console.log("The number of rolls was: " + rolls);
+// 	console.log("The average roll was: " + Math.floor(avg));
+// }
 
-diceroll();
+// diceroll();
 
 // create a function that adds the digits of a given number until the sum is only one digit
 
@@ -340,7 +340,7 @@ diceroll();
 // 	console.log(sum);
 // }
 
-// sumToOne(8725167);
+// sumToOne(1003);
 
 //function that does the fibonacci sequence iteratively
 // function iterFib(n){
@@ -430,20 +430,60 @@ diceroll();
 // console.log(RbSearch(array,63));
 
 
+// Basic: Make a function that can be used anywhere in your file and that when invoked will console.log('I am running!'); Give it the name runningLogger.
 
+// function runningLogger(){
+// 	console.log('I am running!');
+// }
 
+// Basic: Make a function that is callable, has one parameter and multiplies the value of the parameter by 10 before returning the result. Give it the name multiplyByTen. Invoke it, passing it the argument 5.
 
+// function multiplyByTen(a){
+// 	answer = a * 10;
+// 	console.log(answer);
+// }
 
+// multiplyByTen(5);
 
+// Basic: Write two functions (stringReturnOne and stringReturnTwo) that each return a different hard-coded string
 
+// function stringReturnOne() {
+// 	console.log('hard-coded strang');
+// }
 
+// function stringReturnTwo() {
+// 	console.log('hard-coded string');
+// }
 
+// Medium: Write a function named caller that has one parameter. If the argument provided to caller is a function (typeof may be useful), invoke the argument. Nothing is returned.
+// var a = stringReturnTwo;
 
+// function caller(b){
+// 	if (typeof b === 'function'){
+// 		stringReturnOne();
+// 	}
+// }
 
+// caller(a);
 
+// Medium: Write a function named myDoubleConsoleLog that has two parameters, if the arguments passed to the function are functions, console.log the value that each, when invoked, returns.
 
+function z(){
+	console.log('hell');
+}
 
+function y(){
+	console.log('yeah!');
+}
 
+function myDoubleConsoleLog(a, b) {
+	if(typeof a === 'function' && typeof b === 'function'){
+		z();
+		y();
+	}
+}
+
+myDoubleConsoleLog(z, y);
 
 
 
