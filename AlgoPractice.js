@@ -468,22 +468,150 @@
 
 // Medium: Write a function named myDoubleConsoleLog that has two parameters, if the arguments passed to the function are functions, console.log the value that each, when invoked, returns.
 
-function z(){
-	console.log('hell');
-}
+// function z(){
+// 	console.log('hell');
+// }
 
-function y(){
-	console.log('yeah!');
-}
+// function y(){
+// 	console.log('yeah!');
+// }
 
-function myDoubleConsoleLog(a, b) {
-	if(typeof a === 'function' && typeof b === 'function'){
-		z();
-		y();
+// function myDoubleConsoleLog(a, b) {
+// 	if(typeof a === 'function' && typeof b === 'function'){
+// 		console.log(a())
+// 		console.log(b())
+// 	}
+// }
+
+// myDoubleConsoleLog(z, y);
+
+// Hard: Write a function named caller2 that has one parameter. It console.log's the string 'starting', waits 2 seconds, and then invokes the argument if the argument is a function. (setTimeout may be useful for this one.) The function should then console.log ‘ending?’ and return “interesting”. Invoke this function by passing it myDoubleConsoleLog.
+
+// function returnSix(){
+// 	return 6;
+// }
+
+// function returnHello(){
+// 	return "Hello";
+// }
+
+// function caller2(someParam){
+// 	console.log('Starting...')
+// 	setTimeout(function(){
+// 		if(typeof someParam === 'function'){
+// 			console.log('About to invoke a function')
+// 			someParam(returnSix, returnHello);
+// 		}
+// 	}, 2000);
+// 	console.log('Ending?')
+// 	return 'interesting'
+// }
+
+// console.log(caller2(myDoubleConsoleLog));
+
+// Create a JavaScript object called person with the following properties/methods
+
+// Properties
+// name - set this as your own name
+// distance_traveled - set this initially as zero
+
+// var person = {
+// 	name: 'Don',
+// 	distance_traveled: 0
+// }
+
+// Methods
+// say_name - should alert the object’s name property
+// say_something - have it accept a parameter. This function should then say for example “{{your name}} says ‘I am cool’” if you pass ‘I am cool’ as an argument to this method.
+// walk - have it alert for example “{{your name}} is walking” and increase distance_traveled by 3
+// run - have it alert for example “{{your name}} is running” and increase distance_traveled by 10
+// crawl - have it alert for example “{{your name}} is crawling” and increase distance_traveled by 1
+
+// person = {
+// 	name: 'Don',
+// 	distance_traveled: 0,
+// 	say_name: function(){
+// 		console.log(this.name)
+// 	},
+// 	say_something: function(){
+// 		return this.name + " says, I'm cool";
+// 	},
+// 	walk: function(){
+// 		console.log(this.name + ' is walking')
+// 		person.distance_traveled += 3;
+// 		console.log('Distance traveled: ' + person.distance_traveled)
+// 	},
+// 	run: function(){
+// 		console.log(this.name + ' is running')
+// 		person.distance_traveled += 10;
+// 		console.log('Distance traveled: ' + person.distance_traveled)
+// 	},
+// 	crawl: function() {
+// 		console.log(person.name + ' is crawling')
+// 		person.distance_traveled += 1;
+// 		console.log('Distance traveled: ' + person.distance_traveled)
+// 	}
+// };
+
+// person.run();person.walk();person.crawl();person.run();person.crawl();
+
+
+function personConstructor(name) {
+		return {
+		name: name,
+		distance_traveled: 0,
+		say_name: function(){
+			console.log(this.name)
+		},
+		say_something: function(something){
+			return this.name + " says, " + something;
+		},
+		walk: function(){
+			console.log(this.name + ' is walking')
+			person.distance_traveled += 3;
+			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+		},
+		run: function(){
+			console.log(this.name + ' is running')
+			person.distance_traveled += 10;
+			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+		},
+		crawl: function() {
+			console.log(person.name + ' is crawling')
+			person.distance_traveled += 1;
+			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+		}
 	}
 }
 
-myDoubleConsoleLog(z, y);
+var person = personConstructor('hotness');
+console.log(person.name);
+console.log(person.crawl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
