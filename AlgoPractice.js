@@ -556,54 +556,73 @@
 // person.run();person.walk();person.crawl();person.run();person.crawl();
 
 
-function personConstructor(name) {
-		return {
-		name: name,
-		distance_traveled: 0,
-		say_name: function(){
-			console.log(this.name)
-		},
-		say_something: function(something){
-			return this.name + " says, " + something;
-		},
-		walk: function(){
-			console.log(this.name + ' is walking')
-			person.distance_traveled += 3;
-			console.log('Distance traveled: ' + personConstructor.distance_traveled)
-		},
-		run: function(){
-			console.log(this.name + ' is running')
-			person.distance_traveled += 10;
-			console.log('Distance traveled: ' + personConstructor.distance_traveled)
-		},
-		crawl: function() {
-			console.log(person.name + ' is crawling')
-			person.distance_traveled += 1;
-			console.log('Distance traveled: ' + personConstructor.distance_traveled)
-		}
+// function personConstructor(name) {
+// 		return {
+// 		name: name,
+// 		distance_traveled: 0,
+// 		say_name: function(){
+// 			console.log(this.name)
+// 		},
+// 		say_something: function(something){
+// 			return this.name + " says, " + something;
+// 		},
+// 		walk: function(){
+// 			console.log(this.name + ' is walking')
+// 			person.distance_traveled += 3;
+// 			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+// 		},
+// 		run: function(){
+// 			console.log(this.name + ' is running')
+// 			person.distance_traveled += 10;
+// 			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+// 		},
+// 		crawl: function() {
+// 			console.log(person.name + ' is crawling')
+// 			person.distance_traveled += 1;
+// 			console.log('Distance traveled: ' + personConstructor.distance_traveled)
+// 		}
+// 	}
+// }
+
+// var person = personConstructor('hotness');
+// console.log(person.name);
+// console.log(person.crawl);
+
+function VehicleConstructor(name, numberOfWheels, numberOfPassengers) {
+	var vehicle = {};
+
+	vehicle.name = name
+	vehicle.wheels = numberOfWheels
+	vehicle.passengers = numberOfPassengers
+	
+	vehicle.makeNoise = function() {
+		console.log('vroom');
 	}
+
+	return vehicle;
 }
 
-var person = personConstructor('hotness');
-console.log(person.name);
-console.log(person.crawl);
+var Bike = new VehicleConstructor('Ray', 2, 1);
+Bike.makeNoise = function(){
+	console.log('ring ring');
+}
 
+Bike.makeNoise();
 
+var Sedan = new VehicleConstructor('Blue', 4, 5);
+Sedan.makeNoise = function(){
+	console.log('honk honk');
+}
 
+Sedan.makeNoise();
 
+var Bus = new VehicleConstructor('Yellow', 8, 10);
+Bus.pickup = function(passejero){
+	Bus.passengers += passejero;
+	console.log(Bus.passengers)
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+Bus.pickup(3);Bus.pickup(5);Bus.pickup(6);Bus.pickup(2);Bus.pickup(9);Bus.pickup(1);
 
 
 
