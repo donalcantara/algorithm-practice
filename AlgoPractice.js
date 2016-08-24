@@ -588,50 +588,101 @@
 // console.log(person.name);
 // console.log(person.crawl);
 
-function VehicleConstructor(name, numberOfWheels, numberOfPassengers) {
-	var vehicle = {};
+// function VehicleConstructor(name, numberOfWheels, numberOfPassengers) {
+// 	var vehicle = {};
 
-	vehicle.name = name
-	vehicle.wheels = numberOfWheels
-	vehicle.passengers = numberOfPassengers
+// 	vehicle.name = name
+// 	vehicle.wheels = numberOfWheels
+// 	vehicle.passengers = numberOfPassengers
 	
-	vehicle.makeNoise = function() {
-		console.log('vroom');
+// 	vehicle.makeNoise = function() {
+// 		console.log('vroom');
+// 	}
+
+// 	return vehicle;
+// }
+
+// var Bike = new VehicleConstructor('Ray', 2, 1);
+// Bike.makeNoise = function(){
+// 	console.log('ring ring');
+// }
+
+// Bike.makeNoise();
+
+// var Sedan = new VehicleConstructor('Blue', 4, 5);
+// Sedan.makeNoise = function(){
+// 	console.log('honk honk');
+// }
+
+// Sedan.makeNoise();
+
+// var Bus = new VehicleConstructor('Yellow', 8, 10);
+// Bus.pickup = function(passejero){
+// 	Bus.passengers += passejero;
+// 	console.log(Bus.passengers)
+// }
+
+// Bus.pickup(3);Bus.pickup(5);Bus.pickup(6);Bus.pickup(2);Bus.pickup(9);Bus.pickup(1);
+
+
+
+// Private Methods and Variables
+// function Ninja(name, age, preJob) {
+// 	var self = this;
+// 	var privateVar = 'this is a private variable'; //var initiated in a constructor are private
+// 	var privateMethod = function(){ //same goes for var functions
+// 		console.log('this is a private method for ' + self.name);
+// 		console.log(this);
+// 	}
+// 	this.name = name;
+// 	this.age = age;
+// 	this.preJob = preJob;
+// 	this.intro = function(){
+// 		console.log('Hi!  I am ' + this.name + '. I used to be a ' + this.preJob + ' and I am ' + this.age + ' years old.');
+// 		privateMethod();
+// 		console.log(privateVar);
+// 	}
+// }
+
+// var Pariece = new Ninja('Pariece', 24, "Teacher");
+// Pariece.intro();
+
+function VehicleConstructor(name, numberOfWheels, numberOfPassengers, speed) {
+	
+	var distanceTraveled = 0;
+	var updateDistranceTraveled = function(){
+		distanceTraveled += speed
 	}
 
-	return vehicle;
+	this.name = name
+	this.wheels = numberOfWheels
+	this.passengers = numberOfPassengers
+	this.speed = speed
+	
+	this.makeNoise = function() {
+		console.log('vroom');
+	}
+	this.move = function(){
+		updateDistranceTraveled();
+		this.makeNoise();
+	}
+	this.checkMiles = function(){
+		console.log(distanceTraveled);
+	}
+	this.holler = function(){
+		console.log(this.name);
+		console.log(this.wheels);
+	}
 }
 
-var Bike = new VehicleConstructor('Ray', 2, 1);
-Bike.makeNoise = function(){
-	console.log('ring ring');
-}
 
-Bike.makeNoise();
+var Bike = new VehicleConstructor('Ray', 2, 1, 10);
 
-var Sedan = new VehicleConstructor('Blue', 4, 5);
-Sedan.makeNoise = function(){
-	console.log('honk honk');
-}
-
-Sedan.makeNoise();
-
-var Bus = new VehicleConstructor('Yellow', 8, 10);
-Bus.pickup = function(passejero){
-	Bus.passengers += passejero;
-	console.log(Bus.passengers)
-}
-
-Bus.pickup(3);Bus.pickup(5);Bus.pickup(6);Bus.pickup(2);Bus.pickup(9);Bus.pickup(1);
-
-
-
-
-
-
-
-
-
+Bike.move();
+Bike.checkMiles();
+Bike.move();
+Bike.checkMiles();
+Bike.holler();
 
 
 
