@@ -687,56 +687,101 @@
 
 //adding prototypes
 
-function VehicleConstructor(name, numberOfWheels, numberOfPassengers, speed) {
+// function VehicleConstructor(name, numberOfWheels, numberOfPassengers, speed) {
 	
-	this.distanceTraveled = 0;
-	this.updateDistranceTraveled = function(){
-		this.distanceTraveled += speed
-	}
+// 	this.distanceTraveled = 0;
+// 	this.updateDistranceTraveled = function(){
+// 		this.distanceTraveled += speed
+// 	}
 
-	this.name = name
-	this.wheels = numberOfWheels
-	this.passengers = numberOfPassengers
-	this.speed = speed
-}
+// 	this.name = name
+// 	this.wheels = numberOfWheels
+// 	this.passengers = numberOfPassengers
+// 	this.speed = speed
+// }
 	
-VehicleConstructor.prototype.makeNoise = function() {
-	console.log('vroom');
+// VehicleConstructor.prototype.makeNoise = function() {
+// 	console.log('vroom');
+// }
+// VehicleConstructor.prototype.move = function(){
+// 	this.updateDistranceTraveled();
+// 	this.makeNoise();
+// 	return this;
+// }
+// VehicleConstructor.prototype.checkMiles = function(){
+// 	console.log(this.distanceTraveled);
+// }
+// VehicleConstructor.prototype.holler = function(){
+// 	console.log(this.name);
+// 	console.log(this.wheels);
+// 	return this;
+// }
+
+
+// var Bike = new VehicleConstructor('Ray', 2, 1, 10);
+
+// Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();
+// Bike.checkMiles();
+// Bike.move();
+// Bike.checkMiles();
+// Bike.holler();
+// Bike.checkMiles();
+
+// console.log(Bike);
+
+
+// Create a Deck object constructor. A deck should have the following functionality:
+
+// The Deck should contain the 52 standard cards
+// The Deck should be able to shuffle
+// The Deck should be able to reset
+// The Deck should be able to deal a random card
+// Deal should return the card that was dealt and remove it from the deck
+
+function Deck(){
+	var suits = ['hearts', 'diamonds', 'spades', 'clubs'],
+		values = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'],
+		self = this;
+
+	this.cards = []
+
+	suits.forEach(function(suit){ //for each suit
+		values.forEach(function(value){ // for each value
+			self.cards.push(new Card(value,suit)); //pushes to array cards above
+		});
+	});
 }
-VehicleConstructor.prototype.move = function(){
-	this.updateDistranceTraveled();
-	this.makeNoise();
-	return this;
+
+var myDeck = new Deck(); //makes a full deck of 52 cards (one value for each suit)
+console.log(myDeck);
+
+Deck.prototype.shuffle = function(){
+
 }
-VehicleConstructor.prototype.checkMiles = function(){
-	console.log(this.distanceTraveled);
+Deck.prototype.reset = function(){
+	
 }
-VehicleConstructor.prototype.holler = function(){
-	console.log(this.name);
-	console.log(this.wheels);
-	return this;
+Deck.prototype.dealRandomCard = function(){
+	
 }
 
+function Card(value, suit){
+	this.value = value;
+	this.suit = suit;
+}
 
-var Bike = new VehicleConstructor('Ray', 2, 1, 10);
+function Player(name){
+	this.name = name;
+	this.hand = [];
+}
 
-Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();
-Bike.checkMiles();
-Bike.move();
-Bike.checkMiles();
-Bike.holler();
-Bike.checkMiles();
+Player.prototype.takeCard = function(){
 
-console.log(Bike);
+}
 
-
-
-
-
-
-
-
-
+Player.prototype.discard = function(){
+	
+}
 
 
 
