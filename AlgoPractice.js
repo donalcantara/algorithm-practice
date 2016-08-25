@@ -647,42 +647,116 @@
 // var Pariece = new Ninja('Pariece', 24, "Teacher");
 // Pariece.intro();
 
+// function VehicleConstructor(name, numberOfWheels, numberOfPassengers, speed) {
+	
+// 	var distanceTraveled = 0;
+// 	var updateDistranceTraveled = function(){
+// 		distanceTraveled += speed
+// 	}
+
+// 	this.name = name
+// 	this.wheels = numberOfWheels
+// 	this.passengers = numberOfPassengers
+// 	this.speed = speed
+	
+// 	this.makeNoise = function() {
+// 		console.log('vroom');
+// 	}
+// 	this.move = function(){
+// 		updateDistranceTraveled();
+// 		this.makeNoise();
+// 	}
+// 	this.checkMiles = function(){
+// 		console.log(distanceTraveled);
+// 	}
+// 	this.holler = function(){
+// 		console.log(this.name);
+// 		console.log(this.wheels);
+// 	}
+// }
+
+
+// var Bike = new VehicleConstructor('Ray', 2, 1, 10);
+
+// Bike.move();
+// Bike.checkMiles();
+// Bike.move();
+// Bike.checkMiles();
+// Bike.holler();
+
+
+//adding prototypes
+
 function VehicleConstructor(name, numberOfWheels, numberOfPassengers, speed) {
 	
-	var distanceTraveled = 0;
-	var updateDistranceTraveled = function(){
-		distanceTraveled += speed
+	this.distanceTraveled = 0;
+	this.updateDistranceTraveled = function(){
+		this.distanceTraveled += speed
 	}
 
 	this.name = name
 	this.wheels = numberOfWheels
 	this.passengers = numberOfPassengers
 	this.speed = speed
+}
 	
-	this.makeNoise = function() {
-		console.log('vroom');
-	}
-	this.move = function(){
-		updateDistranceTraveled();
-		this.makeNoise();
-	}
-	this.checkMiles = function(){
-		console.log(distanceTraveled);
-	}
-	this.holler = function(){
-		console.log(this.name);
-		console.log(this.wheels);
-	}
+VehicleConstructor.prototype.makeNoise = function() {
+	console.log('vroom');
+}
+VehicleConstructor.prototype.move = function(){
+	this.updateDistranceTraveled();
+	this.makeNoise();
+	return this;
+}
+VehicleConstructor.prototype.checkMiles = function(){
+	console.log(this.distanceTraveled);
+}
+VehicleConstructor.prototype.holler = function(){
+	console.log(this.name);
+	console.log(this.wheels);
+	return this;
 }
 
 
 var Bike = new VehicleConstructor('Ray', 2, 1, 10);
 
-Bike.move();
+Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();Bike.move();
 Bike.checkMiles();
 Bike.move();
 Bike.checkMiles();
 Bike.holler();
+Bike.checkMiles();
+
+console.log(Bike);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
