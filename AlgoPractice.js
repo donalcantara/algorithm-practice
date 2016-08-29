@@ -167,6 +167,25 @@
 // }
 // console.log(x);
 
+// Reverse Word order
+
+string = 'this is a test';
+
+function reverseOrder(b){
+		if (b.length === 0){
+			return False;
+		}
+		var y = b.split(" ");
+		console.log(y);
+		var x = [];
+		for(var a = y.length-1; a >= 0; a--){
+			x.push(y[a])
+		}
+		console.log(x);
+}
+
+reverseOrder(string);
+
 //first and last numbers of array switched
 // x = [2, 3, 5, 7, 6];
 // console.log(x);
@@ -738,50 +757,50 @@
 // The Deck should be able to deal a random card
 // Deal should return the card that was dealt and remove it from the deck
 
-function Deck(){
-	var suits = ['hearts', 'diamonds', 'spades', 'clubs'],
-		values = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'],
-		self = this;
+// function Deck(){
+// 	var suits = ['hearts', 'diamonds', 'spades', 'clubs'],
+// 		values = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'],
+// 		self = this;
 
-	this.cards = []
+// 	this.cards = []
 
-	suits.forEach(function(suit){ //for each suit
-		values.forEach(function(value){ // for each value
-			self.cards.push(new Card(value,suit)); //pushes to array cards above
-		});
-	});
-}
+// 	suits.forEach(function(suit){ //for each suit
+// 		values.forEach(function(value){ // for each value
+// 			self.cards.push(new Card(value,suit)); //pushes to array cards above
+// 		});
+// 	});
+// }
 
-var myDeck = new Deck(); //makes a full deck of 52 cards (one value for each suit)
-console.log(myDeck);
+// var myDeck = new Deck(); //makes a full deck of 52 cards (one value for each suit)
+// console.log(myDeck);
 
-Deck.prototype.shuffle = function(){
+// Deck.prototype.shuffle = function(){
 
-}
-Deck.prototype.reset = function(){
+// }
+// Deck.prototype.reset = function(){
 	
-}
-Deck.prototype.dealRandomCard = function(){
+// }
+// Deck.prototype.dealRandomCard = function(){
 	
-}
+// }
 
-function Card(value, suit){
-	this.value = value;
-	this.suit = suit;
-}
+// function Card(value, suit){
+// 	this.value = value;
+// 	this.suit = suit;
+// }
 
-function Player(name){
-	this.name = name;
-	this.hand = [];
-}
+// function Player(name){
+// 	this.name = name;
+// 	this.hand = [];
+// }
 
-Player.prototype.takeCard = function(){
+// Player.prototype.takeCard = function(){
 
-}
+// }
 
-Player.prototype.discard = function(){
+// Player.prototype.discard = function(){
 	
-}
+// }
 
 
 
