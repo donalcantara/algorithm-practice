@@ -14,6 +14,20 @@
 
 // twofittyfive(10000);
 
+//console log all numbers 1-100, console log multiples of 3 with 'fizz', multiples of 5 with 'buzz', multiples of both with 'fizzbuzz'
+// for (var i = 1; i <= 100; i++) {
+// 	if (i % 3 == 0 && i % 5 == 0){
+// 		console.log('fizzbuzz')
+// 	}
+// 	else if (i % 3 == 0) {
+// 		console.log('fizz')
+// 	}
+// 	else if (i % 5 == 0) {
+// 		console.log('buzz')
+// 	}
+// 	else (console.log(i))
+// }
+
 // console log all odd numbers from 1-1000
 // for (var i = 0; i < 1001; i++) {
 // 	if (i % 2 != 0){
