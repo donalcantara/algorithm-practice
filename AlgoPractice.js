@@ -1,3 +1,4 @@
+
 // // console log all numbers from 1-255
 // for (var i = 0; i < 256; i++) {
 // 	console.log(i);
@@ -35,9 +36,9 @@
 // 	}
 // }
 
-//print the sum of all the odd numbers from 1 to 5000
+//print the sum of all the odd numbers from 1 to 500
 // sum = 0;
-// for (var i = 0; i < 5001; i++) {
+// for (var i = 0; i < 501; i++) {
 // 	if (i % 2 != 0){
 // 	sum = sum + i;
 // 	}
@@ -133,7 +134,7 @@
 // console.log(x);
 
 //find the max, min and avg of an array
-// x = [1, 5, 10, -2];
+// x = [1, 0, 10, -2];
 // max = x[0];
 // min = x[0];
 // sum = 0;
@@ -266,7 +267,7 @@
 // linearSearch(8, arr);   // => 1
 // linearSearch(2, arr); // => false
 
-//adding up all the numbers up to and including specified N
+// adding up all the numbers up to and including specified N
 // function iSum(num){
 // 	var sum = 0;
 // 	for (var i = 1; i <= num; i++) {
@@ -373,7 +374,7 @@
 // 	console.log(sum);
 // }
 
-// sumToOne(1003);
+// sumToOne(1007);
 
 //function that does the fibonacci sequence iteratively
 // function iterFib(n){
@@ -460,7 +461,7 @@
 // }
 
 // array = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-// console.log(RbSearch(array,63));
+// console.log(RbSearch(array,29));
 
 
 // Basic: Make a function that can be used anywhere in your file and that when invoked will console.log('I am running!'); Give it the name runningLogger.
@@ -761,4 +762,3 @@
 // Bike.checkMiles();
 
 // console.log(Bike);
-
